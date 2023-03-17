@@ -1,3 +1,8 @@
+/**
+ * As funções que são utilizadas dentro de um componente não necessariamente precisam ser declaradas dentro do componente.
+ * @returns {JSX.Element}
+ */
+
 const Calculator = () => {
 
     const sum = (firstNumber, secondNumber) => firstNumber + secondNumber;
