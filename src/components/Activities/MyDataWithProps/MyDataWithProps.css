@@ -1,0 +1,9 @@
+.MyDataWithProps {
+    align-items: flex-start;
+    border: 3px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
