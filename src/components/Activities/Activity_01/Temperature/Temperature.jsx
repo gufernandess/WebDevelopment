@@ -1,15 +1,16 @@
 import './Temperature.css';
 
-const celsiusToFahrenheit = (celsius) => ((celsius * 9/5) + 32).toFixed(2);
-
-const fareinheitToCelsius = (fahrenheit) => ((fahrenheit - 32) * 5/9).toFixed(2);
-
-const kelvinToCelsiusAndFahrenheit = (celsius, fahrenheit) => JSON.stringify({
-    celsius: celsius + 273.15, fahrenheit: (fahrenheit + 459.67) * 5/9
-});
 
 
 const Temperature = () => {
+    
+    const celsiusToFahrenheit = celsius => ((celsius * 9/5) + 32).toFixed(2);
+    
+    const fareinheitToCelsius = fahrenheit => ((fahrenheit - 32) * 5/9).toFixed(2);
+    
+    const kelvinToCelsiusAndFahrenheit = (kelvin) => JSON.stringify({
+        celsius: kelvin - 273.15, fahrenheit: kelvin * 1.8 - 459.4
+    });
 
     const kelvin = JSON.parse(kelvinToCelsiusAndFahrenheit(10,20));
     
