@@ -2,7 +2,8 @@ import './App.css';
 
 function App() {
   return (
-    {/*<>
+  <>
+  {/*<>
       <Father height={1.8} weight={90} />
 
       <hr />
@@ -22,6 +23,7 @@ function App() {
         </Arena>
       </World>
   </>*/}
+  </>
   );
 }
 
