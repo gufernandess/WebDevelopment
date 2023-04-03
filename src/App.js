@@ -1,8 +1,10 @@
 import './App.css';
+import Grandfather from './components/Activities/Activity_02/pokemon/Grandfather';
 
 function App() {
   return (
   <>
+  <Grandfather />
   {/*<>
       <Father height={1.8} weight={90} />
 
