@@ -1,10 +1,12 @@
 import './App.css';
-import Cities from './components/Activities/Activity_03/Cities';
+import PokemonAxios from './components/Axios/PokemonAxios';
+import MainScreen from './components/Redux/v1/MainScreen';
 
 function App() {
   return (
-  <>
-  <Cities />
+    <>
+    <PokemonAxios />
+    {/*<Dad vector={[1,2,3,4,5]} />*/}
   {/*<>
       <Father height={1.8} weight={90} />
 

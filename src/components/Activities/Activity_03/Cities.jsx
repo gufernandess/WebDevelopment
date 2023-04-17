@@ -17,8 +17,31 @@ const Cities = () => {
         setCities({...cities, [event.target.name]: cities[event.target.value].votes++});
     }
 
-    useEffect(() => {}, [cities, voted]);
+    useEffect(() => {
+        let mostVoted = [];
+        let lessVoted = [];
+        let mostVotes = 0;
+        let lessVotes = cities[0].votes;
 
+        Object.keys(cities).forEach(city => {
+            if(city.votes > mostVotes){
+                mostVotes = city.votes;
+                mostVoted = [city.name];
+            }else if(city.votes === mostVotes){
+                mostVoted.push(city.name);
+            }
+
+            if(city.votes < lessVotes){
+                lessVotes = city.votes;
+                lessVoted = [city.name];
+            }else if(city.votes === lessVotes){
+                lessVoted.push(city.name);
+            }
+        });
+        
+        setVoted(mostVoted, lessVoted);
+    }, [cities, voted]);
+    
     return(
         <>
             <h1>{cities[0].name}</h1>
