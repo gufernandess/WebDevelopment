@@ -1,11 +1,14 @@
 import './App.css';
 import PokemonAxios from './components/Axios/PokemonAxios';
+import Async from './components/Promises&Async/Async';
+import Promises from './components/Promises&Async/Promises';
 import MainScreen from './components/Redux/v1/MainScreen';
+import Index from './components/Redux/v2/Index';
 
 function App() {
   return (
     <>
-    <PokemonAxios />
+    <Promises />
     {/*<Dad vector={[1,2,3,4,5]} />*/}
   {/*<>
       <Father height={1.8} weight={90} />

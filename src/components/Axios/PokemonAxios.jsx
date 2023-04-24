@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+/**
+ * O axios é uma biblioteca que faz requisições HTTP para uma API através de promises.
+ * @returns 
+ */
+
 const PokemonAxios = () => {
     const [value, setValue] = useState({
         id: 1,
@@ -11,8 +16,8 @@ const PokemonAxios = () => {
 
     useEffect(
         () => {
-            axios.get(`https://pokeapi.co/api/v2/pokemon/${value.id}`)
-            .then((response) => {
+            axios.get(`https://pokeapi.co/api/v2/pokemon/${value.id}`) // O axios.get vai fazer uma requisição GET para a API.
+            .then((response) => { // Então ele vai retornar uma resposta, onde o usuário vai extrair os dados.
                 setValue(
                     {
                         id: response.data.id,
@@ -22,7 +27,7 @@ const PokemonAxios = () => {
                     }
                 );
             })
-            .catch((error) => alert(error))
+            .catch((error) => alert(error)) // Caso ocorra algum erro, ele vai retornar um alerta.
 
         }, [value.id]
     )
