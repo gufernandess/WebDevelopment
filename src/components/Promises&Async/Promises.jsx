@@ -4,7 +4,7 @@ const promise = new Promise((resolve, reject) => {
         setTimeout(
             () => {
                 const myInt = Math.floor(Math.random() * 10) + 1;
-                return myInt % 2 == 0 ? resolve(myInt) : reject("Erro");
+                return myInt % 2 === 0 ? resolve(myInt) : reject("Erro");
             }
             ,
             3000
