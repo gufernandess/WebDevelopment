@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-body {
+/* body {
     background: #00000f;
     color: #ffffff;
     display: flex;
@@ -55,4 +55,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */
